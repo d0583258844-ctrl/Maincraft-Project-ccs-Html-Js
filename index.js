@@ -30,9 +30,12 @@ board.addEventListener("click", (e) => {
   if (e.target.classList.contains("tile")) {
     const listClassList = Array.from(e.target.classList)
     e.target.classList.remove(listClassList.find(c=>c!=="tile"));
-    e.target.classList.add("grass");
+    e.target.classList.add("sky");
   }
 });
+
+const menu = document.getElementById('button-1')
+const newworld = document.getElementById('button-2')
 
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
