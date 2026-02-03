@@ -1,0 +1,26 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(100, 45px);
+  grid-template-rows: repeat(30, 45px);
+}
+
+.allElements:hover {
+  border: 0.5px solid rgb(0, 0, 0);
+}
+
+.sky {
+  background-color: #87CEEB;
+}
+.grass {
+  background-image: url("./imgs/grass.webp");
+}
+
+.graound {
+  background-image: url("https://guileless-pegasus-d698c6.netlify.app/blocks/dirt.webp");
+}
+.gray {
+  background-image: url("https://guileless-pegasus-d698c6.netlify.app/blocks/stone.webp");
+}
+.rocks {
+  background-image: url("https://guileless-pegasus-d698c6.netlify.app/blocks/bedrock.webp");
+}
