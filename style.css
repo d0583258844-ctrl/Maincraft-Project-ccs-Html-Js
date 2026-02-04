@@ -19,16 +19,20 @@ body {
 }
 .grass {
   background-image: url("./imgs/grass.webp");
+  background-size: contain;
 }
 
 .graound {
   background-image: url("https://guileless-pegasus-d698c6.netlify.app/blocks/dirt.webp");
+  background-size: contain;
 }
 .gray {
   background-image: url("https://guileless-pegasus-d698c6.netlify.app/blocks/stone.webp");
+  background-size: contain;
 }
 .rocks {
   background-image: url("https://guileless-pegasus-d698c6.netlify.app/blocks/bedrock.webp");
+  background-size: contain;
 }
 
 .menu {
@@ -57,4 +61,36 @@ body {
   background-color: #888888e7;
   color: white;
   margin: 1rem;
+}
+
+#control {
+  top: 10%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  gap: 10px;
+}
+
+.control-button {
+  border: 0;
+  padding: 20px;
+}
+
+#ax {
+  background: url(https://guileless-pegasus-d698c6.netlify.app/blocks/diamond-axe.webp)
+    center center / cover;
+}
+
+#pickaxe {
+  background: url(https://guileless-pegasus-d698c6.netlify.app/blocks/diamond-pickaxe.webp)
+    center center / cover;
+}
+#shovel {
+  background: url(https://guileless-pegasus-d698c6.netlify.app/blocks/diamond-shovel.webp)
+    center center / cover;
+}
+#Scissors {
+  background: url(https://guileless-pegasus-d698c6.netlify.app/blocks/shears.webp)
+    center center / cover;
 }
