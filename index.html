@@ -6,12 +6,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body onload="init()">
     <div id="board"></div>
     <div class="menu">
       <button class="button" id="button-1">Menu</button>
       <button class="button" id="button-2">New world</button>
     </div>
+    <div id="control">
+      <button id="pickaxe" class="control-button"></button>
+      <button id="ax" class="control-button"></button>
+      <button id="shovel" class="control-button"></button>
+      <button id="Scissors" class="control-button"></button>
+    </div>
+    <section class="window">
+      <button id="graoundcounter" class="btCounter">
+        <img class="imgbutton" src="https://guileless-pegasus-d698c6.netlify.app/blocks/dirt.webp" alt="graound"/></button><div>0</div>
+        <button id="graycounter" class="btCounter">
+        <img class="imgbutton" src="https://guileless-pegasus-d698c6.netlify.app/blocks/stone.webp" alt="gray"/></button><div>0</div>
+      <button id="rockscounter" class="btCounter">
+        <img class="imgbutton" src="https://guileless-pegasus-d698c6.netlify.app/blocks/bedrock.webp" alt="rocks"/>
+      </button>
+      <div>0</div>
+      <button id="grasscounter" class="btCounter"> <img class="imgbutton" src="./imgs/grass.webp" alt="grass" /></button><div>0</div>
+    </section>
   </body>
   <script src="./index.js" defer></script>
 </html>
