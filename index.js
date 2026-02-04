@@ -1,18 +1,12 @@
 const board = document.getElementById("board");
 const control = document.getElementById("control");
-let userSelection;
-const arrbuttons = ["pickaxe", "ax", "shovel", "Scissors"];
+const button = document.createElement("button");
+const arrButtons = ["pickaxe", "ax", "shovel", "Scissors"];
+let currentTool = 1;
 
-const tools = {
-  rocks: "pickaxe",
-  gray: "pickaxe",
-  tree: "ax",
-  graound: "shovel",
-  leaves: "Scissors",
-  grass: "Scissors",
-};
 
-// this function create the bord with fuor divs they all have one same classList, and each one have more uneqe classlist/name
+// this function create the bord with fuor divs.
+// They all have one same classList, and each one have more uneqe classlist/name
 function createBord() {
   const n = 3003;
   for (let i = 0; i < n; i++) {
@@ -60,35 +54,27 @@ function matchingTheTools(tile) {
   });
 }
 
-for (const element of arrbuttons) {
-  const control = document.getElementById("control");
-  const button = document.createElement("button");
+for (const element of arrButtons) {
+
   button.id = element;
   button.className = "control-button";
   control.appendChild(button);
 }
 
-control.addEventListener("click", (e) => {
-  if (e.target.classList.contains("control-button")) {
-    userSelection = e.target.id;
-    if (userSelection === "pickaxe") {
-      matchingTheTools("rocks");
-      matchingTheTools("gray");
-    }
-    if (userSelection === "ax") {
-      matchingTheTools("tree");
-    }
 
-    if (userSelection === "shovel") {
-      matchingTheTools("graound");
-    }
-    if (userSelection === "Scissors") {
-      matchingTheTools("leaves");
-      matchingTheTools("grass");
-    }
-    console.log(userSelection);
+function init() {
+  // updating currentTool according to menu selection
+  control.addEventListener("click", (e) => { setTool(e) });
+}
+
+function setTool(e) {
+  if (e.target.classList.contains("control-button")) {
+    if (e.target.id === "pickaxe") { currentTool = 1 }
+    if (e.target.id === "ax") { currentTool = 2 }
+    if (e.target.id === "shovel") { currentTool = 3 }
+    if (e.target.id === "Scissors") { currentTool = 4 }
   }
-});
+}
 
 // let temp  = document.getElementsByClassName('control-button')
 // temp.addEventListener('click', () => {
