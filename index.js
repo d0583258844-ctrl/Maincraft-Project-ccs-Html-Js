@@ -1,4 +1,5 @@
 const board = document.getElementById("board");
+const windoww = document.getElementsByClassName("window")
 const control = document.getElementById("control");
 const button = document.createElement("button");
 const arrButtons = ["pickaxe", "ax", "shovel", "Scissors"];
@@ -103,6 +104,10 @@ function setTool(e) {
     }
   }
 }
+
+function setTaileBack() {
+
+ }
 
 // let temp  = document.getElementsByClassName('control-button')
 // temp.addEventListener('click', () => {
