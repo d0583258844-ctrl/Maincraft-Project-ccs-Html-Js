@@ -31,6 +31,7 @@ function createBord() {
     board.append(div);
   }
 }
+
 createBord();
 
 // board.addEventListener("click", (e) => {
@@ -41,31 +42,35 @@ createBord();
 //   }
 // });
 
-// this function get one of the  tails and saerch for is tool id, and them flip the card/tail to the global color "sky"
-function matchingTheTools(tile) {
-  board.addEventListener("click", (e) => {
-    if (e.target.classList.contains("tile")) {
-      const listClassList = Array.from(e.target.classList);
-      if (listClassList.find((a) => a === tile)) {
-        e.target.classList.remove(listClassList.find((c) => c !== "tile"));
-        e.target.classList.add("sky");
-      }
-    }
-  });
-}
 
-for (const element of arrButtons) {
 
-  button.id = element;
-  button.className = "control-button";
-  control.appendChild(button);
-}
 
 
 function init() {
-  // updating currentTool according to menu selection
+  // Updating currentTool according to menu selection
   control.addEventListener("click", (e) => { setTool(e) });
+
+  // Listen to the board
+  board.addEventListener("click", (e) => {
+    if (e.target.classList.contains("tile")) {
+      let tileType = Array.from(e.target.classList);
+
+      if (tileType.includes("graound") && currentTool == 4) {
+        e.target.classList.remove(tileType.find((c) => c !== "tile"));
+        e.target.classList.add("sky");
+      }
+    }
+  })
+
+  for (const element of arrButtons) {
+    button.id = element;
+    button.className = "control-button";
+    control.appendChild(button);
+  }
+
 }
+
+
 
 function setTool(e) {
   if (e.target.classList.contains("control-button")) {
