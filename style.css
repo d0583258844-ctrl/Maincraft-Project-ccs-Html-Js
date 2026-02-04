@@ -94,3 +94,15 @@ body {
   background: url(https://guileless-pegasus-d698c6.netlify.app/blocks/shears.webp)
     center center / cover;
 }
+
+.window {
+  left: 500px;
+  top: 3px;
+  position: sticky;
+  gap: 1rem;
+
+}
+
+.imgbutton {
+  width: 60px;
+}
